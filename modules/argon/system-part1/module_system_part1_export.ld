@@ -26,4 +26,3 @@ PROVIDE ( dynalib_location_hal_wlan             = _system_part1_dynalib_table_fl
 PROVIDE ( dynalib_location_hal_ble              = _system_part1_dynalib_table_flash_start + 96 );
 PROVIDE ( dynalib_location_hal_nfc              = _system_part1_dynalib_table_flash_start + 100 );
 PROVIDE ( dynalib_location_hal_mesh             = _system_part1_dynalib_table_flash_start + 104 );
-
