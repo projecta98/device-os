@@ -52,8 +52,6 @@ extern void* link_bss_location;
 extern void* link_bss_end;
 #define link_bss_size ((size_t)&link_bss_end - (size_t)&link_bss_location)
 
-extern void* link_end_of_static_ram;
-
 void* module_system_part1_pre_init()
 {
     if ( (&link_global_data_start!=&link_global_data_initial_values) && (link_global_data_size != 0))
@@ -83,5 +81,4 @@ void module_system_part1_init()
     {
         link_constructors_location[ctor_num]();
     }
-
 }
