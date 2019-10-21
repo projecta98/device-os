@@ -88,8 +88,8 @@ extern "C" {
  *            __Stack_Init marks the bottom of the stack, as reserved
  *            in the linker script (../linker/linker_stm32f10x_md*.ld)
  */
-extern char _end, __Stack_Init;
-static char *heap_end = &_end;
+extern char link_heap_location, __Stack_Init;
+static char *heap_end = &link_heap_location;
 caddr_t _sbrk(int incr)
 {
 	char *prev_heap_end = heap_end;

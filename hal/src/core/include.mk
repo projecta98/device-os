@@ -12,8 +12,8 @@ INCLUDE_DIRS += $(TARGET_HAL_PATH)/src/stm32
 
 ifneq (,$(findstring hal,$(MAKE_DEPENDENCIES)))
 
-LDFLAGS += -Tlinker_$(STM32_DEVICE_LC)_dfu.ld
-LDFLAGS += -L$(COMMON_BUILD)/arm/linker
+LDFLAGS += -T$(HAL_SRC_COREV1_PATH)/linker.ld
+LDFLAGS += -L$(COMMON_BUILD)/arm/linker/stm32f1xx
 LDFLAGS += --specs=nano.specs -lc -lnosys
 USE_PRINTF_FLOAT ?= y
 ifeq ("$(USE_PRINTF_FLOAT)","y")
